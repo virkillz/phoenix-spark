@@ -19,7 +19,6 @@ defmodule Spark.Account.User do
     field :username, :string
     field :is_verified, :boolean, default: false
     field :verification_code, :string
-    field :username, :string
 
     timestamps()
   end
