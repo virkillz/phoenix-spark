@@ -5,6 +5,6 @@ alias Spark.Account.User
     fullname: "Joe Admin",
     username: "administrator",
     password_hash: "$2b$12$8As.fIX4fQsbZuhcIhKr7OU3fqxaaPsfYuFZ/S6fUEDd2HDkzN.Tu",
-    avatar: "/images/default.png"
+    avatar: "/images/default.png",
     role: "administrator"    
   }

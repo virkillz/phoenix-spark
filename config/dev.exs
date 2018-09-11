@@ -53,6 +53,6 @@ config :spark, Spark.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "Vodka170785",
-  database: "jamjaman_dev",
+  database: "spark_dev",
   hostname: "localhost",
   pool_size: 10
