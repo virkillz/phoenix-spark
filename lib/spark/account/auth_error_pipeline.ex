@@ -3,8 +3,8 @@ defmodule Spark.Auth.AuthErrorHandler do
 
   import Plug.Conn
 
-  def auth_error(conn, {type, _reason}, _opts) do
-  	Phoenix.Controller.redirect(conn, to: "/admin/login")
+  def auth_error(conn, {_type, _reason}, _opts) do
+    Phoenix.Controller.redirect(conn, to: "/admin/login")
     # body = Poison.encode!(%{message: to_string(type)})
     # send_resp(conn, 401, body)
   end
