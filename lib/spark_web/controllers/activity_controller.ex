@@ -2,13 +2,11 @@ defmodule SparkWeb.ActivityController do
   use SparkWeb, :controller
 
   alias Spark.Logging
-  alias Spark.Logging.Activity
 
   def index(conn, _params) do
     activity = Logging.get_last_x_activity(100)
     render(conn, "index.html", activity: activity)
   end
-
 
   def create(conn, %{"activity" => activity_params}) do
     case Logging.create_activity(activity_params) do
@@ -16,11 +14,11 @@ defmodule SparkWeb.ActivityController do
         conn
         |> put_flash(:info, "Activity created successfully.")
         |> redirect(to: activity_path(conn, :show, activity))
+
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
   end
-
 
   def delete(conn, %{"id" => id}) do
     activity = Logging.get_activity!(id)
