@@ -105,7 +105,7 @@
                                 <%= if @conn.assigns.user_signed_in? do %>
                                 <li class="dropdown"> 
                                     <span class="dropdown__trigger">
-                                       Welcome <%= @conn.assigns.current_user.fullname %> <img src="<%= @conn.assigns.current_user.avatar %>" class="avatar" />
+                                       Welcome <%= @conn.assigns.current_user.fullname %>
                                     </span>
                                             <div class="dropdown__container">
                                                 <div class="container">
